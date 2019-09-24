@@ -1,4 +1,4 @@
-package com.util
+package com.CORE.util
 
 /**
   * 类型工具类

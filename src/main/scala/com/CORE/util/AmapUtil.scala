@@ -1,5 +1,4 @@
-package com.util
-
+package com.CORE.util
 
 import com.alibaba.fastjson.{JSON, JSONObject}
 

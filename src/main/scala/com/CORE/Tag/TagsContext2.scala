@@ -1,7 +1,7 @@
-package com.Tag
+package com.CORE.Tag
 
+import com.CORE.util.TagUtils
 import com.typesafe.config.ConfigFactory
-import com.util.TagUtils
 import org.apache.hadoop.hbase.client.{ConnectionFactory, Put}
 import org.apache.hadoop.hbase.io.ImmutableBytesWritable
 import org.apache.hadoop.hbase.mapred.TableOutputFormat

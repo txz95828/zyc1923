@@ -1,4 +1,4 @@
-package com.util
+package com.CORE.util
 
 import org.apache.spark.sql.types._
 

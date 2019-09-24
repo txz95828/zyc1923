@@ -1,6 +1,6 @@
-package com.Tag
+package com.CORE.Tag
 
-import com.util.Tag
+import com.CORE.util.Tag
 import org.apache.commons.lang3.StringUtils
 import org.apache.spark.sql.Row
 

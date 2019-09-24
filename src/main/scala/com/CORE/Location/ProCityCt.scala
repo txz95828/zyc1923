@@ -1,4 +1,4 @@
-package com.Location
+package com.CORE.Location
 
 import java.util.Properties
 

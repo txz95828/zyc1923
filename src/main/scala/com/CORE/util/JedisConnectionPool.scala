@@ -1,4 +1,4 @@
-package com.util
+package com.CORE.util
 
 import redis.clients.jedis.{Jedis, JedisPool, JedisPoolConfig}
 
