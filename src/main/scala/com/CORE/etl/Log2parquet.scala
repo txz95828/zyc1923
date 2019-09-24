@@ -1,6 +1,6 @@
 package com.CORE.etl
 
-import com.CORE.etl.util.SchemaUtil
+import com.CORE.util.SchemaUtil
 import com.CORE.util.{SchemaUtil, String2Type}
 import org.apache.spark.sql.{Row, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}

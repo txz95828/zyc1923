@@ -1,6 +1,6 @@
 package com.CORE.util
 
-import com.CORE.etl.Tag.BusinessTag
+import com.CORE.Tag.BusinessTag
 import org.apache.spark.sql.SparkSession
 
 import scala.util.Random

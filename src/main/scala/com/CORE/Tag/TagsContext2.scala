@@ -15,24 +15,24 @@ object TagsContext2 {
   def main(args: Array[String]): Unit = {
     val spark = SparkSession.builder().appName("Tags").master("local").getOrCreate()
     import spark.implicits._
-//    val load = ConfigFactory.load()
-//    val HbaseTableName = load.getString("HBASE.tableName")
-//    val configuration = spark.sparkContext.hadoopConfiguration
-//    configuration.set("hbase.zookeeper.quorum",load.getString("HBASE.Host"))
-//    val hbConn = ConnectionFactory.createConnection(configuration)
-//    val hbadmin = hbConn.getAdmin
-//    if(!hbadmin.tableExists(TableName.valueOf(HbaseTableName))){
-//      println("当前表可用")
-//      val tableDescriptor = new HTableDescriptor(TableName.valueOf(HbaseTableName))
-//      val hColumnDescriptor = new HColumnDescriptor("tags")
-//      tableDescriptor.addFamily(hColumnDescriptor)
-//      hbadmin.createTable(tableDescriptor)
-//      hbadmin.close()
-//      hbConn.close()
-//    }
-//    val conf = new JobConf(configuration)
-//    conf.setOutputFormat(classOf[TableOutputFormat])
-//    conf.set(TableOutputFormat.OUTPUT_TABLE,HbaseTableName)
+    val load = ConfigFactory.load()
+    val HbaseTableName = load.getString("HBASE.tableName")
+    val configuration = spark.sparkContext.hadoopConfiguration
+    configuration.set("hbase.zookeeper.quorum",load.getString("HBASE.Host"))
+    val hbConn = ConnectionFactory.createConnection(configuration)
+    val hbadmin = hbConn.getAdmin
+    if(!hbadmin.tableExists(TableName.valueOf(HbaseTableName))){
+      println("当前表可用")
+      val tableDescriptor = new HTableDescriptor(TableName.valueOf(HbaseTableName))
+      val hColumnDescriptor = new HColumnDescriptor("tags")
+      tableDescriptor.addFamily(hColumnDescriptor)
+      hbadmin.createTable(tableDescriptor)
+      hbadmin.close()
+      hbConn.close()
+    }
+    val conf = new JobConf(configuration)
+    conf.setOutputFormat(classOf[TableOutputFormat])
+    conf.set(TableOutputFormat.OUTPUT_TABLE,HbaseTableName)
 
 
 
